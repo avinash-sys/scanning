@@ -43,12 +43,6 @@ pipeline {
         stage('build the code') {
             steps {
                 echo "code build successfully"
-		        build job: 'scan',
-                        parameters: [
-                                booleanParam(name: 'MOUNT_MAVEN', value: true),
-                                string(name: 'BUILD_BRANCH', value: 'master'),
-                                string(name: 'USER_BUILD_TAG', value: 'N/A'),
-                        ]
             }
         }
     }
